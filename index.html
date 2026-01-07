@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empower Africa Network - Skills Empowerment Catalyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #2E8B57;
+            --dark-green: #1E6B47;
+            --light-green: #E8F5E9;
+            --terracotta: #D2691E;
+            --accent-yellow: #FFD700;
+            --dark-blue: #1A5276;
+            --light-blue: #EBF5FB;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --white: #FFFFFF;
+            --light-gray: #F5F5F5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--dark-green);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-green);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--terracotta);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--dark-blue);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--terracotta);
+            color: var(--white);
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--dark-green);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--terracotta);
+            color: var(--terracotta);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--terracotta);
+            color: var(--white);
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            display: inline-block;
+        }
+
+        .section-header p {
+            max-width: 700px;
+            margin: 1rem auto 0;
+            color: var(--text-light);
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0;
+            color: var(--dark-green);
+        }
+
+        .logo span {
+            color: var(--terracotta);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-green);
+        }
+
+        nav ul li a.active {
+            color: var(--primary-green);
+        }
+
+        nav ul li a.active:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-green);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--dark-green);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 180px 0 100px;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .hero-btns .btn {
+            background-color: var(--terracotta);
+        }
+
+        .hero-btns .btn-secondary {
+            background-color: transparent;
+            border-color: var(--white);
+            color: var(--white);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .mission-box, .vision-box {
+            background-color: var(--light-green);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            border-left: 5px solid var(--primary-green);
+        }
+
+        .mission-box h3, .vision-box h3 {
+            color: var(--dark-green);
+            margin-bottom: 15px;
+        }
+
+        .about-img {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Programs Section */
+        .programs {
+            background-color: var(--light-gray);
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .program-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .program-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .program-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .program-card:hover .program-img img {
+            transform: scale(1.05);
+        }
+
+        .program-content {
+            padding: 25px;
+        }
+
+        .program-content h3 {
+            margin-bottom: 15px;
+        }
+
+        .program-content ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .program-content ul li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .program-content ul li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        /* Impact Section */
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .stat-box {
+            background-color: var(--white);
+            padding: 30px;
+            text-align: center;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .stat-box:hover {
+            background-color: var(--light-green);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--terracotta);
+            margin-bottom: 10px;
+        }
+
+        .stat-text {
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+
+        .impact-stories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .story-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .story-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .story-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-content {
+            padding: 25px;
+        }
+
+        /* Get Involved Section */
+        .get-involved {
+            background-color: var(--light-blue);
+        }
+
+        .involve-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .involve-card {
+            background-color: var(--white);
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .involve-card:hover {
+            transform: translateY(-10px);
+            background-color: var(--light-green);
+        }
+
+        .involve-icon {
+            font-size: 3rem;
+            color: var(--terracotta);
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+
+        .footer-col p {
+            opacity: 0.8;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            opacity: 0.8;
+        }
+
+        .footer-col ul li a:hover {
+            opacity: 1;
+            color: var(--accent-yellow);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--terracotta);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Page Styles */
+        .page-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 150px 0 80px;
+            margin-top: 70px;
+        }
+
+        .page-hero h1 {
+            color: var(--white);
+            font-size: 2.8rem;
+        }
+
+        .page-hero p {
+            max-width: 700px;
+            margin: 1rem auto 0;
+            opacity: 0.9;
+        }
+
+        .page-content {
+            padding: 80px 0;
+        }
+
+        /* Team Page */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .team-member:hover .member-img img {
+            transform: scale(1.05);
+        }
+
+        .member-info {
+            padding: 25px 20px;
+        }
+
+        .member-info h3 {
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            color: var(--terracotta);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Page */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--terracotta);
+            margin-top: 5px;
+        }
+
+        .contact-form {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 0;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--white);
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 30px;
+            }
+            
+            nav ul li {
+                margin: 0 0 20px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-btns .btn {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero {
+                padding: 150px 0 70px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>E<span>AN</span></h1>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#get-involved">Get Involved</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home">
+        <div class="hero">
+            <div class="container hero-content">
+                <h1>Empowering Africa Through Skills and Enterprise</h1>
+                <p>We equip individuals and communities across Africa with practical skills, entrepreneurial support, and resources to build sustainable livelihoods and drive inclusive economic growth.</p>
+                <div class="hero-btns">
+                    <a href="#get-involved" class="btn">Get Involved</a>
+                    <a href="#programs" class="btn btn-secondary">Our Programs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Empower Africa Network</h2>
+                    <p>Empower Africa Network (EAN) is dedicated to empowering individuals and communities across Africa through skills-based training, entrepreneurial support, education, and community development initiatives.</p>
+                    <p>Our mission is to enhance livelihoods, promote inclusive economic growth, and foster sustainable development across underserved communities.</p>
+                    
+                    <div class="mission-vision">
+                        <div class="mission-box">
+                            <h3>Our Mission</h3>
+                            <p>Empower individuals and communities in Africa with skills, resources, and support to drive economic growth and sustainable livelihoods.</p>
+                        </div>
+                        <div class="vision-box">
+                            <h3>Our Vision</h3>
+                            <p>A prosperous Africa where individuals and communities thrive through skills, entrepreneurship, and empowerment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img src="img2.jpg" alt="EAN team working with community">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="section programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Programs</h2>
+                <p>We deliver comprehensive programs that address the root causes of unemployment and underdevelopment in African communities</p>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="img3.jpg" alt="Skills Training">
+                    </div>
+                    <div class="program-content">
+                        <h3>Skills for Growth</h3>
+                        <ul>
+                            <li>Vocational training (tailoring, carpentry, electrical work)</li>
+                            <li>Digital skills training (coding, graphic design)</li>
+                            <li>Entrepreneurial skills development</li>
+                            <li>Business planning and financial management</li>
+                        </ul>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="img4.jpg" alt="Entrepreneur Support">
+                    </div>
+                    <div class="program-content">
+                        <h3>Entrepreneur Support</h3>
+                        <ul>
+                            <li>Business incubation for startups</li>
+                            <li>Access to finance and micro-loans</li>
+                            <li>Market linkages and networking</li>
+                            <li>Mentorship from experienced professionals</li>
+                        </ul>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="img5.jpg" alt="Community Upliftment">
+                    </div>
+                    <div class="program-content">
+                        <h3>Community Upliftment</h3>
+                        <ul>
+                            <li>Support for vulnerable groups</li>
+                            <li>Women and youth empowerment</li>
+                            <li>Health and education initiatives</li>
+                            <li>Water access projects (boreholes)</li>
+                        </ul>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Impact</h2>
+                <p>Measuring success through tangible outcomes and transformed lives</p>
+            </div>
+            
+            <div class="impact-stats">
+                <div class="stat-box">
+                    <div class="stat-number" data-count="1250">0</div>
+                    <div class="stat-text">People Trained</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" data-count="320">0</div>
+                    <div class="stat-text">Businesses Supported</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" data-count="85">0</div>
+                    <div class="stat-text">% Income Increase</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" data-count="12">0</div>
+                    <div class="stat-text">Communities Reached</div>
+                </div>
+            </div>
+            
+            <div class="section-header">
+                <h3>Success Stories</h3>
+            </div>
+            
+            <div class="impact-stories">
+                <div class="story-card">
+                    <div class="story-img">
+                        <img src="img6.jpg" alt="Success Story 1">
+                    </div>
+                    <div class="story-content">
+                        <h4>From Trainee to Business Owner</h4>
+                        <p>Amina completed our tailoring program and now runs a successful fashion business employing 5 other women from her community.</p>
+                        <a href="#" class="btn">Read Full Story</a>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-img">
+                        <img src="img7.jpg" alt="Success Story 2">
+                    </div>
+                    <div class="story-content">
+                        <h4>Youth Digital Empowerment</h4>
+                        <p>Kwame learned digital marketing skills and now helps local businesses grow their online presence, increasing his income by 300%.</p>
+                        <a href="#" class="btn">Read Full Story</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="section get-involved">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Involved</h2>
+                <p>Join us in building a prosperous Africa. Your support can transform lives and communities.</p>
+            </div>
+            
+            <div class="involve-options">
+                <div class="involve-card">
+                    <div class="involve-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Donate</h3>
+                    <p>Your financial contribution helps us expand our programs and reach more communities in need.</p>
+                    <a href="#" class="btn">Donate Now</a>
+                </div>
+                
+                <div class="involve-card">
+                    <div class="involve-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partner With Us</h3>
+                    <p>Corporations, foundations, and institutions can partner with us to create lasting impact.</p>
+                    <a href="#" class="btn">Become a Partner</a>
+                </div>
+                
+                <div class="involve-card">
+                    <div class="involve-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Volunteer</h3>
+                    <p>Share your skills and expertise as a mentor, trainer, or field volunteer.</p>
+                    <a href="#" class="btn">Volunteer Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Empower Africa Network</h3>
+                    <p>Driving sustainable livelihoods, inclusive growth, and long-term community resilience across Africa.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Our Programs</a></li>
+                        <li><a href="#impact">Our Impact</a></li>
+                        <li><a href="#get-involved">Get Involved</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Tamale, Northern Region, Ghana</li>
+                        <li><i class="fas fa-phone"></i> +233 XX XXX XXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@empowerafricanetwork.org</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter to receive updates on our work and impact stories.</p>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn" style="margin-top: 10px;">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Empower Africa Network. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('#mainNav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Animated counter for impact stats
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        const animateCounter = () => {
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current > target) {
+                        stat.textContent = target + (stat.textContent.includes('%') ? '%' : '+');
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current) + (stat.textContent.includes('%') ? '%' : '+');
+                    }
+                }, 20);
+            });
+        };
+        
+        // Trigger counter when section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(document.getElementById('impact'));
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Update active nav link based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const scrollPosition = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
