@@ -670,7 +670,40 @@
             resize: vertical;
         }
 
+        /* Animation for Cards */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .program-card,
+        .involve-card,
+        .team-member,
+        .story-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Stagger animation for cards */
+        .program-card:nth-child(2) { animation-delay: 0.1s; }
+        .program-card:nth-child(3) { animation-delay: 0.2s; }
+        .program-card:nth-child(4) { animation-delay: 0.3s; }
+
+        .involve-card:nth-child(2) { animation-delay: 0.1s; }
+        .involve-card:nth-child(3) { animation-delay: 0.2s; }
+
         /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .container {
+                width: 95%;
+            }
+        }
+
         @media (max-width: 992px) {
             h1 {
                 font-size: 2.2rem;
@@ -691,6 +724,27 @@
             .mission-vision {
                 grid-template-columns: 1fr;
             }
+            
+            /* Tablet: 2 cards per row */
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .impact-stories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .involve-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .impact-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
@@ -698,6 +752,7 @@
                 padding: 15px 0;
             }
             
+            /* Mobile Navigation */
             nav {
                 position: fixed;
                 top: 70px;
@@ -707,6 +762,7 @@
                 background-color: var(--white);
                 transition: var(--transition);
                 box-shadow: var(--shadow);
+                z-index: 999;
             }
             
             nav.active {
@@ -726,6 +782,7 @@
                 display: block;
             }
             
+            /* Hero Section */
             .hero h1 {
                 font-size: 2.2rem;
             }
@@ -733,12 +790,112 @@
             .hero-btns {
                 flex-direction: column;
                 align-items: center;
+                gap: 15px;
             }
             
             .hero-btns .btn {
                 width: 100%;
                 max-width: 300px;
-                margin-bottom: 15px;
+                margin-bottom: 0;
+            }
+            
+            /* Cards Layout - 2 per row */
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .impact-stories {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .involve-options {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .impact-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            /* Card Adjustments */
+            .program-card,
+            .story-card,
+            .involve-card,
+            .team-member {
+                margin-bottom: 0;
+            }
+            
+            .program-content,
+            .story-content,
+            .member-info {
+                padding: 20px 15px;
+            }
+            
+            .program-img,
+            .story-img,
+            .member-img {
+                height: 180px;
+            }
+            
+            /* Button Improvements for Touch */
+            .btn {
+                padding: 14px 20px;
+                min-height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .program-card .btn,
+            .story-card .btn,
+            .involve-card .btn {
+                width: 100%;
+            }
+            
+            /* Typography Adjustments */
+            .program-content h3,
+            .story-content h4,
+            .involve-card h3,
+            .member-info h3 {
+                font-size: 1.2rem;
+            }
+            
+            .program-content p,
+            .story-content p,
+            .involve-card p,
+            .member-info p {
+                font-size: 0.95rem;
+            }
+            
+            /* Stats Box */
+            .stat-box {
+                padding: 20px 15px;
+            }
+            
+            .stat-number {
+                font-size: 2.2rem;
+            }
+            
+            .stat-text {
+                font-size: 0.95rem;
+            }
+            
+            /* Page Hero */
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            /* Mission/Vision Boxes */
+            .mission-box, .vision-box {
+                padding: 20px;
             }
         }
 
@@ -763,8 +920,90 @@
                 font-size: 1.8rem;
             }
             
+            .hero p {
+                font-size: 1rem;
+            }
+            
             .page-hero h1 {
                 font-size: 2rem;
+            }
+            
+            /* Single column for very small screens */
+            .programs-grid,
+            .impact-stories,
+            .involve-options,
+            .impact-stats,
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            /* Adjust card sizes for small screens */
+            .program-img,
+            .story-img {
+                height: 160px;
+            }
+            
+            .member-img {
+                height: 220px;
+            }
+            
+            /* About section adjustments */
+            .about-content {
+                gap: 30px;
+            }
+            
+            /* Reduce padding */
+            .program-content,
+            .story-content,
+            .involve-card {
+                padding: 20px;
+            }
+            
+            .involve-card {
+                padding: 25px 20px;
+            }
+            
+            /* Footer adjustments */
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .hero p {
+                font-size: 0.95rem;
+            }
+            
+            .btn {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+            
+            /* Even smaller card images */
+            .program-img,
+            .story-img {
+                height: 140px;
+            }
+            
+            .member-img {
+                height: 200px;
+            }
+        }
+
+        /* Touch feedback for mobile */
+        @media (hover: none) and (pointer: coarse) {
+            .program-card:active,
+            .involve-card:active,
+            .team-member:active,
+            .stat-box:active {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             }
         }
     </style>
@@ -774,7 +1013,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <h1>E<span>AN</span></h1>
+                <h1>Empower <span>Africa</span></h1>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
@@ -786,7 +1025,7 @@
                     <li><a href="#programs">Programs</a></li>
                     <li><a href="#impact">Impact</a></li>
                     <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -989,6 +1228,80 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch to learn more about our work or explore partnership opportunities</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>Tamale, Northern Region, Ghana</p>
+                            <p>Pan-African Vision with focus on Ghana</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone Number</h3>
+                            <p>+233 XX XXX XXXX</p>
+                            <p>Monday - Friday, 9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email Address</h3>
+                            <p>info@empowerafricanetwork.org</p>
+                            <p>We respond within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1016,11 +1329,12 @@
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Contact Info</h3>
+                    <h3>Programs</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Tamale, Northern Region, Ghana</li>
-                        <li><i class="fas fa-phone"></i> +233 XX XXX XXXX</li>
-                        <li><i class="fas fa-envelope"></i> info@empowerafricanetwork.org</li>
+                        <li><a href="#programs">Skills for Growth</a></li>
+                        <li><a href="#programs">Entrepreneur Support</a></li>
+                        <li><a href="#programs">Community Upliftment</a></li>
+                        <li><a href="#programs">Water & Health Projects</a></li>
                     </ul>
                 </div>
                 
@@ -1035,7 +1349,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Empower Africa Network. All rights reserved.</p>
+                <p>&copy; 2023 Empower Africa Network. All rights reserved. | Empowering Africa Through Skills and Enterprise</p>
             </div>
         </div>
     </footer>
@@ -1068,7 +1382,7 @@
         const animateCounter = () => {
             statNumbers.forEach(stat => {
                 const target = parseInt(stat.getAttribute('data-count'));
-                const increment = target / 100;
+                const increment = target / 50;
                 let current = 0;
                 
                 const timer = setInterval(() => {
@@ -1079,7 +1393,7 @@
                     } else {
                         stat.textContent = Math.floor(current) + (stat.textContent.includes('%') ? '%' : '+');
                     }
-                }, 20);
+                }, 30);
             });
         };
         
@@ -1091,7 +1405,7 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.3 });
         
         observer.observe(document.getElementById('impact'));
         
@@ -1135,6 +1449,64 @@
                     link.classList.add('active');
                 }
             });
+        });
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // In a real application, you would send this data to a server
+                // For now, we'll just show an alert
+                alert(`Thank you ${name}! Your message has been sent. We will contact you at ${email} soon.`);
+                
+                // Reset the form
+                contactForm.reset();
+            });
+        }
+        
+        // Newsletter subscription
+        const newsletterBtn = document.querySelector('.footer-col .btn');
+        if (newsletterBtn) {
+            newsletterBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const emailInput = this.parentElement.querySelector('input[type="email"]');
+                if (emailInput.value) {
+                    alert(`Thank you for subscribing with ${emailInput.value}! You'll receive our updates soon.`);
+                    emailInput.value = '';
+                } else {
+                    alert('Please enter your email address.');
+                }
+            });
+        }
+        
+        // Touch feedback for mobile cards
+        const cards = document.querySelectorAll('.program-card, .involve-card, .team-member, .stat-box');
+        cards.forEach(card => {
+            card.addEventListener('touchstart', function() {
+                this.classList.add('touched');
+            });
+            
+            card.addEventListener('touchend', function() {
+                setTimeout(() => {
+                    this.classList.remove('touched');
+                }, 150);
+            });
+        });
+        
+        // Initialize animations on page load
+        window.addEventListener('load', () => {
+            // Add a slight delay to ensure all content is loaded
+            setTimeout(() => {
+                document.body.style.opacity = 1;
+            }, 100);
         });
     </script>
 </body>
