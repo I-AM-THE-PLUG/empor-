@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Empower Africa Network</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Empower <span>Africa</span></h1>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch to learn more about our work or explore partnership opportunities</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="page-content">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>We'd love to hear from you. Reach out through any of the channels below:</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Our Office</h3>
+                                <p>Empower Africa Network</p>
+                                <p>123 Development Avenue</p>
+                                <p>Tamale, Northern Region</p>
+                                <p>Ghana, West Africa</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Phone Numbers</h3>
+                                <p>Main Office: +233 24 XXX XXXX</p>
+                                <p>Programs: +233 20 XXX XXXX</p>
+                                <p>WhatsApp: +233 24 XXX XXXX</p>
+                                <p>Mon-Fri, 9:00 AM - 5:00 PM GMT</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Email Addresses</h3>
+                                <p>General Inquiries: info@empowerafricanetwork.org</p>
+                                <p>Partnerships: partnerships@empowerafricanetwork.org</p>
+                                <p>Program Applications: apply@empowerafricanetwork.org</p>
+                                <p>We respond within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Office Hours</h3>
+                                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                                <p>Sunday: Closed</p>
+                                <p>Public Holidays: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="social-contact">
+                        <h3>Connect With Us</h3>
+                        <div class="social-links large">
+                            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                            <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <div class="form-container">
+                        <h2>Send Us a Message</h2>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" class="form-control" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="volunteer">Volunteer Application</option>
+                                    <option value="donation">Donation Inquiry</option>
+                                    <option value="program">Program Information</option>
+                                    <option value="media">Media Request</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message *</label>
+                                <textarea id="message" name="message" class="form-control"
+                                    placeholder="Please share details about your inquiry..." required></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for updates
+                                </label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="#">Privacy Policy</a> *
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Us</h2>
+                <p>Visit our office or reach out to our regional coordinators</p>
+            </div>
+
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Interactive Map Coming Soon</h3>
+                        <p>Our locations across Ghana and West Africa</p>
+                    </div>
+                </div>
+
+                <div class="locations-grid">
+                    <div class="location-card">
+                        <div class="location-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Headquarters</h3>
+                        <p>Tamale, Northern Region, Ghana</p>
+                        <p>Main operational base and program coordination</p>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Regional Offices</h3>
+                        <p>Wa, Bolgatanga, Bawku</p>
+                        <p>Field operations and community engagement</p>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-icon">
+                            <i class="fas fa-globe-africa"></i>
+                        </div>
+                        <h3>West Africa Network</h3>
+                        <p>Burkina Faso, Mali, Togo</p>
+                        <p>Regional expansion and partnerships</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find quick answers to common questions about our work</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can I donate to Empower Africa Network?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can make donations through our secure online portal, bank transfer, or mobile money.
+                            Visit our "Get Involved" page for detailed donation options and tax-deductible giving
+                            information.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What programs are currently accepting applications?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our Skills for Growth and Entrepreneur Support programs accept rolling applications. Check
+                            our Programs page for current openings and application deadlines. You can also contact us
+                            directly for specific program inquiries.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer volunteer opportunities?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We welcome volunteers with various skill sets including teaching, healthcare, business
+                            mentoring, and administrative support. Visit our volunteer page or contact our volunteer
+                            coordinator for current opportunities.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How can corporations partner with EAN?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer several partnership models including skills-based volunteering, employee engagement
+                            programs, CSR initiatives, and cause marketing partnerships. Contact our Partnerships
+                            Director at partnerships@empowerafricanetwork.org to discuss collaboration opportunities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Empower Africa Network</h3>
+                    <p>Driving sustainable livelihoods, inclusive growth, and long-term community resilience across
+                        Africa.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="programs.html#skills">Skills for Growth</a></li>
+                        <li><a href="programs.html#entrepreneur">Entrepreneur Support</a></li>
+                        <li><a href="programs.html#community">Community Upliftment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Tamale, Northern Region, Ghana</li>
+                        <li><i class="fas fa-phone"></i> +233 XX XXX XXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@empowerafricanetwork.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Empower Africa Network. All rights reserved. | Empowering Africa Through Skills and
+                    Enterprise</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+
+</html>
