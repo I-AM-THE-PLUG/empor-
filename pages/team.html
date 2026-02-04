@@ -8,9 +8,96 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/pages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Splash Screen Styles */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #2E8B57;
+            /* Primary green */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s ease-out;
+        }
+
+        .logo-splash {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo-splash h1 {
+            font-size: 2rem;
+            color: #2E8B57;
+            margin: 0;
+            text-align: center;
+        }
+
+        .logo-splash span {
+            color: #D2691E;
+            /* Terracotta */
+        }
+
+        .loading-text {
+            color: white;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            animation: fadeInOut 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        .splash-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <div class="logo-splash">
+            <img src="../images/logo .jpeg" alt="Empower Africa Network"
+                style="width:40%; height:auto; max-width:300px; object-fit:contain;">
+        </div>
+        <div class="loading-text">Empowering Africa Through Skills and Enterprise</div>
+    </div>
     <!-- Header & Navigation -->
     <header>
         <div class="container header-container">
@@ -55,7 +142,7 @@
                         <img src="../images/ngo1.jpeg" alt="Executive Director">
                     </div>
                     <div class="member-info">
-                        <h3>Kwame Asante</h3>
+                        <h3>Safwan Wali</h3>
                         <div class="member-role">Executive Director</div>
                         <p>Leading EAN since 2018 with 15+ years of experience in community development and social
                             entrepreneurship.</p>
@@ -71,7 +158,7 @@
                         <img src="../images/ngo2.jpeg" alt="Program Director">
                     </div>
                     <div class="member-info">
-                        <h3>Amina Ibrahim</h3>
+                        <h3>Majeeda Umar Ahmed</h3>
                         <div class="member-role">Program Director</div>
                         <p>Overseeing all program implementations with expertise in vocational training and youth
                             empowerment.</p>
@@ -87,7 +174,7 @@
                         <img src="../images/ngo3.jpeg" alt="Finance Director">
                     </div>
                     <div class="member-info">
-                        <h3>Joseph Mensah</h3>
+                        <h3>Ali Abubakar Napari</h3>
                         <div class="member-role">Finance Director</div>
                         <p>Managing financial operations and donor relations with strong background in nonprofit
                             accounting.</p>
@@ -115,7 +202,7 @@
                         <img src="../images/ngo4.jpeg" alt="Skills Training Coordinator">
                     </div>
                     <div class="member-info">
-                        <h3>Fatima Alhassan</h3>
+                        <h3>Shawky Abdelwahab Elsharkawy</h3>
                         <div class="member-role">Skills Training Coordinator</div>
                         <p>Specializes in vocational training programs and has trained over 500 beneficiaries in various
                             trades.</p>
@@ -127,7 +214,7 @@
                         <img src="../images/ngo5.jpeg" alt="Entrepreneurship Coordinator">
                     </div>
                     <div class="member-info">
-                        <h3>Samuel Osei</h3>
+                        <h3>Gloria Nasiratu Amenu</h3>
                         <div class="member-role">Entrepreneurship Coordinator</div>
                         <p>Supports startups and small businesses with mentorship, funding access, and market linkage
                             services.</p>
@@ -139,7 +226,7 @@
                         <img src="../images/ngo6.jpeg" alt="Community Development Coordinator">
                     </div>
                     <div class="member-info">
-                        <h3>Grace Boateng</h3>
+                        <h3>Ibrahim Yussif Osman</h3>
                         <div class="member-role">Community Development Coordinator</div>
                         <p>Focuses on women's empowerment and community health initiatives across Northern Ghana.</p>
                     </div>
@@ -173,7 +260,7 @@
                         <img src="../images/ngo8.jpeg" alt="Field Officer">
                     </div>
                     <div class="member-info">
-                        <h3>Mohammed Abdulai</h3>
+                        <h3>Safwan Wali</h3>
                         <div class="member-role">Senior Field Officer</div>
                         <p>Manages field operations in 5 communities with focus on program implementation and
                             monitoring.</p>
@@ -185,7 +272,7 @@
                         <img src="../images/ngo9.jpeg" alt="Training Instructor">
                     </div>
                     <div class="member-info">
-                        <h3>Patience Kusi</h3>
+                        <h3>Majeeda Umar Ahmed</h3>
                         <div class="member-role">Master Trainer</div>
                         <p>Certified instructor in tailoring and garment making with 8 years of teaching experience.</p>
                     </div>
@@ -193,10 +280,10 @@
 
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="../images/field-staff-3.jpg" alt="Community Liaison">
+                        <img src="../images/ngo10.jpeg" alt="Community Liaison">
                     </div>
                     <div class="member-info">
-                        <h3>Bernard Tetteh</h3>
+                        <h3>Ali Abubakar Napari</h3>
                         <div class="member-role">Community Liaison Officer</div>
                         <p>Bridges communication between EAN and local communities, ensuring culturally appropriate
                             programs.</p>
@@ -205,10 +292,10 @@
 
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="../images/field-staff-4.jpg" alt="Monitoring Officer">
+                        <img src="../images/ngo11.jpeg" alt="Monitoring Officer">
                     </div>
                     <div class="member-info">
-                        <h3>Rachel Nkrumah</h3>
+                        <h3>Shawky Abdelwahab Elsharkawy</h3>
                         <div class="member-role">Monitoring & Evaluation Officer</div>
                         <p>Tracks program outcomes and ensures accountability through rigorous data collection and
                             analysis.</p>
@@ -217,10 +304,10 @@
 
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="../images/field-staff-5.jpg" alt="Health Coordinator">
+                        <img src="../images/ngo12.jpeg" alt="Health Coordinator">
                     </div>
                     <div class="member-info">
-                        <h3>Thomas Yeboah</h3>
+                        <h3>Gloria Nasiratu Amenu</h3>
                         <div class="member-role">Health Programs Coordinator</div>
                         <p>Coordinates health education campaigns and partners with local health facilities.</p>
                     </div>
@@ -228,10 +315,10 @@
 
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="../images/field-staff-6.jpg" alt="Water Projects Manager">
+                        <img src="../images/ngo13.jpeg" alt="Water Projects Manager">
                     </div>
                     <div class="member-info">
-                        <h3>Hajia Musah</h3>
+                        <h3>Ibrahim Yussif Osman</h3>
                         <div class="member-role">Water Projects Manager</div>
                         <p>Supervises borehole installations and water system maintenance across project communities.
                         </p>
@@ -255,7 +342,7 @@
                         <img src="../images/ngo10.jpeg" alt="Board Chairman">
                     </div>
                     <div class="advisor-info">
-                        <h3>Dr. Kwabena Frimpong</h3>
+                        <h3>Safwan Wali</h3>
                         <div class="advisor-title">Board Chairman</div>
                         <div class="advisor-org">Former Minister of Education, Ghana</div>
                         <p>Provides strategic direction and leverages government partnerships for program expansion.</p>
@@ -267,7 +354,7 @@
                         <img src="../images/ngo11.jpeg" alt="International Development Expert">
                     </div>
                     <div class="advisor-info">
-                        <h3>Dr. Sarah Johnson</h3>
+                        <h3>Majeeda Umar Ahmed</h3>
                         <div class="advisor-title">Development Advisor</div>
                         <div class="advisor-org">Harvard University, International Development</div>
                         <p>Brings global perspective on sustainable development and measurement of social impact.</p>
@@ -279,7 +366,7 @@
                         <img src="../images/ngo12.jpeg" alt="Business Mentor">
                     </div>
                     <div class="advisor-info">
-                        <h3>Mr. Kojo Asamoah</h3>
+                        <h3>Ali Abubakar Napari</h3>
                         <div class="advisor-title">Business Mentor</div>
                         <div class="advisor-org">CEO, Asamoah Group of Companies</div>
                         <p>Provides business expertise and mentorship for entrepreneur program participants.</p>
@@ -354,6 +441,15 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script>
+        // Hide splash screen after page loads
+        window.addEventListener('load', function () {
+            const splashScreen = document.getElementById('splash-screen');
+            setTimeout(() => {
+                splashScreen.classList.add('splash-hidden');
+            }, 1500);
+        });
+    </script>
 </body>
 
 </html>
