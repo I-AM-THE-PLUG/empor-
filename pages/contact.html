@@ -8,9 +8,96 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/pages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Splash Screen Styles */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #2E8B57;
+            /* Primary green */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s ease-out;
+        }
+
+        .logo-splash {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo-splash h1 {
+            font-size: 2rem;
+            color: #2E8B57;
+            margin: 0;
+            text-align: center;
+        }
+
+        .logo-splash span {
+            color: #D2691E;
+            /* Terracotta */
+        }
+
+        .loading-text {
+            color: white;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            animation: fadeInOut 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        .splash-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <div class="logo-splash">
+            <img src="../images/logo .jpeg" alt="Empower Africa Network"
+                style="width:40%; height:auto; max-width:300px; object-fit:contain;">
+        </div>
+        <div class="loading-text">Empowering Africa Through Skills and Enterprise</div>
+    </div>
     <!-- Header & Navigation -->
     <header>
         <div class="container header-container">
@@ -349,6 +436,15 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/contact.js"></script>
+    <script>
+        // Hide splash screen after page loads
+        window.addEventListener('load', function () {
+            const splashScreen = document.getElementById('splash-screen');
+            setTimeout(() => {
+                splashScreen.classList.add('splash-hidden');
+            }, 1500);
+        });
+    </script>
 </body>
 
 </html>
